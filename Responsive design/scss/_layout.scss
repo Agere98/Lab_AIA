@@ -1,5 +1,5 @@
 $spacing: 16px;
-$text-padding: 16px;
+$text-padding: 32px 16px;
 $border-width: 2px;
 $border-style: $border-width solid black;
 
@@ -34,17 +34,11 @@ body {
 
 .navbar {
   float: right;
-  margin: auto;
 
   a {
-    display: block;
     text-align: center;
     width: 40px;
-    padding: 14px 16px;
-  }
-
-  a:hover {
-    text-decoration: underline;
+    padding: 12px;
   }
 }
 
@@ -53,9 +47,13 @@ body {
   padding: $spacing;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .section {
   float: left;
-  width: auto;
   margin: $spacing;
   border: $border-style;
 
@@ -65,7 +63,7 @@ body {
 
   .section-header {
     width: 160px;
-    padding: $text-padding / 2;
+    padding: 8px;
     margin-top: -$border-width;
     margin-right: -$border-width;
     margin-left: auto;
@@ -76,7 +74,7 @@ body {
 
 .footer {
   flex-shrink: 0;
-  padding: 2 * $spacing;
+  padding: $text-padding;
   text-align: center;
   border-top: $border-style;
 
