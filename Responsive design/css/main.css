@@ -1,1 +1,184 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  font-size: 200%;
+}
+
+.header, .navbar {
+  font-family: Cambria, "Times New Roman", serif;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.section {
+  background-color: #e0e4cc;
+  text-align: justify;
+}
+
+.section .section-header {
+  font-size: 150%;
+}
+
+.section #Lorem {
+  background-color: #69d2e7;
+}
+
+.section #Ipsum {
+  background-color: #f38630;
+}
+
+.section #Dolor {
+  background-color: #e9aeaf;
+}
+
+.footer {
+  background-color: #e0e4cc;
+}
+
+.footer em {
+  font-weight: bold;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header, .navbar {
+  margin: 16px;
+  padding: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow: hidden;
+}
+
+.header *, .navbar * {
+  float: left;
+}
+
+.header .logo, .navbar .logo {
+  height: 100px;
+}
+
+.header .title, .navbar .title {
+  margin: 16px;
+}
+
+.navbar {
+  float: right;
+  margin: auto;
+}
+
+.navbar a {
+  display: block;
+  text-align: center;
+  width: 40px;
+  padding: 14px 16px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 16px;
+}
+
+.section {
+  float: left;
+  width: auto;
+  margin: 16px;
+  border: 2px solid black;
+}
+
+.section p {
+  padding: 16px;
+}
+
+.section .section-header {
+  width: 160px;
+  padding: 8px;
+  margin-top: -2px;
+  margin-right: -2px;
+  margin-left: auto;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 32px;
+  text-align: center;
+  border-top: 2px solid black;
+}
+
+.footer em {
+  display: table;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=main.css.map */
