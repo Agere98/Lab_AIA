@@ -2,7 +2,6 @@ $font-size: 16px;
 $font-family: Arial, Helvetica, sans-serif;
 $primary-background-color: white;
 $secondary-background-color: #e0e4cc;
-//$border-color: black;
 
 body {
   font-size: $font-size;
@@ -18,8 +17,6 @@ body {
 }
 
 .navbar {
-  @extend .header;
-
   a {
     color: black;
     text-decoration: none;
@@ -28,12 +25,10 @@ body {
 
 .section {
   background-color: $secondary-background-color;
-  //border: 2px solid $border-color;
   text-align: justify;
 
   .section-header {
     font-size: 150%;
-    //border: 2px solid $border-color;
   }
 
   #Lorem {
@@ -51,7 +46,6 @@ body {
 
 .footer {
   background-color: $secondary-background-color;
-  //border-top: 2px solid $border-color;
 
   em {
     font-weight: bold;
