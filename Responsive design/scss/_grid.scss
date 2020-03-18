@@ -1,0 +1,29 @@
+$grid-columns: 6;
+$threshold-large: 1024px;
+$threshold-medium: 600px;
+
+@mixin col($infix, $i) {
+  .col-#{$infix}-#{$i} {
+    float: left;
+    display: flex;
+    width: 100% / $grid-columns * $i;
+  }
+}
+
+@media only screen and (max-width: $threshold-medium - 1px) {
+  @for $i from 1 through $grid-columns {
+    @include col(s, $i);
+  }
+}
+
+@media only screen and (min-width: $threshold-medium) and (max-width: $threshold-large - 1px) {
+  @for $i from 1 through $grid-columns {
+    @include col(m, $i);
+  }
+}
+
+@media only screen and (min-width: $threshold-large) {
+  @for $i from 1 through $grid-columns {
+    @include col(l, $i);
+  }
+}
