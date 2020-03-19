@@ -1,6 +1,4 @@
 $grid-columns: 6;
-$threshold-large: 1024px;
-$threshold-medium: 600px;
 
 @mixin col($infix, $i) {
   .col-#{$infix}-#{$i} {
