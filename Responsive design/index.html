@@ -7,18 +7,22 @@
     <title>Responsive website</title>
 
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
 
   <body>
     <div class="header">
       <img src="resources/logo.png" class="logo" />
       <h1 class="title">Responsive website</h1>
-      <div class="navbar">
+      <div class="navbar" id="menu">
         <a href="">Lorem</a>
         <a href="">Ipsum</a>
         <a href="">Dolor</a>
         <a href="">Sit</a>
         <a href="">Amet</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </div>
 
@@ -72,5 +76,7 @@
     <div class="footer">
       <span>Designed by <em>Mateusz Bąk</em></span>
     </div>
+
+    <script src="js/menu.js"></script>
   </body>
 </html>

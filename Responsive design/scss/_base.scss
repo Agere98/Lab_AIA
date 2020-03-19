@@ -2,6 +2,7 @@ $font-size: 16px;
 $font-family: Arial, Helvetica, sans-serif;
 $primary-background-color: white;
 $secondary-background-color: #e0e4cc;
+$button-hover-color: #fcffee;
 
 body {
   font-size: $font-size;
@@ -24,6 +25,15 @@ body {
 
   a:hover {
     text-decoration: underline;
+  }
+
+  .icon {
+    font-size: 140%;
+    background-color: $secondary-background-color;
+  }
+
+  .icon:hover {
+    background-color: $button-hover-color;
   }
 }
 
