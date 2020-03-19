@@ -40,6 +40,16 @@ body {
     width: 40px;
     padding: 12px;
   }
+
+  a.icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    border: $border-style;
+    border-radius: 16px;
+  }
 }
 
 .content {
@@ -81,5 +91,48 @@ body {
   em {
     display: table;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: $threshold-large - 1px) {
+  .navbar {
+    position: relative;
+    padding-top: 120px;
+
+    a {
+      display: none;
+    }
+
+    a.icon {
+      display: block;
+    }
+  }
+
+  .navbar.responsive {
+    display: inherit;
+    float: none;
+
+    a {
+      display: block;
+    }
+
+    $menu-border-style: 1px solid lightgray;
+
+    a:not(.icon) {
+      float: none;
+      width: auto;
+      height: 20px;
+      border-bottom: $menu-border-style;
+    }
+
+    a:first-child {
+      border-top: $menu-border-style;
+    }
+  }
+}
+
+@media only screen and (max-width: $threshold-medium - 1px) {
+  .title {
+    display: none;
   }
 }

@@ -65,6 +65,15 @@ body {
   text-decoration: underline;
 }
 
+.navbar .icon {
+  font-size: 140%;
+  background-color: #e0e4cc;
+}
+
+.navbar .icon:hover {
+  background-color: #fcffee;
+}
+
 .section {
   background-color: #e0e4cc;
   text-align: justify;
@@ -139,6 +148,16 @@ body {
   padding: 12px;
 }
 
+.navbar a.icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  border: 2px solid black;
+  border-radius: 16px;
+}
+
 .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -185,6 +204,41 @@ body {
 .footer em {
   display: table;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navbar {
+    position: relative;
+    padding-top: 120px;
+  }
+  .navbar a {
+    display: none;
+  }
+  .navbar a.icon {
+    display: block;
+  }
+  .navbar.responsive {
+    display: inherit;
+    float: none;
+  }
+  .navbar.responsive a {
+    display: block;
+  }
+  .navbar.responsive a:not(.icon) {
+    float: none;
+    width: auto;
+    height: 20px;
+    border-bottom: 1px solid lightgray;
+  }
+  .navbar.responsive a:first-child {
+    border-top: 1px solid lightgray;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .title {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 599px) {
