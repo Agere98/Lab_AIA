@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+th, td {
+  width: 25%;
+  padding: 4px;
+}
+
+input {
+  width: 100%;
+}
+
+table button {
+    width: 72px;
+    margin: 0px 4px;
+}
