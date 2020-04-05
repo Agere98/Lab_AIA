@@ -12,7 +12,7 @@ function addEntry() {
   const field = document.createElement("td");
   const saveButton = document.createElement("button");
   saveButton.textContent = "Save";
-//   saveButton.onclick = saveEntry;
+  saveButton.onclick = saveEntry;
   field.appendChild(saveButton);
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
@@ -28,4 +28,20 @@ function removeEntry() {
     entry = entry.parentElement;
   }
   entry.remove();
+}
+
+function saveEntry() {
+  let entry = this.parentElement;
+  while (entry.tagName != "TR") {
+    entry = entry.parentElement;
+  }
+  [...entry.getElementsByTagName("td")].forEach((element) => {
+    const child = element.children[0];
+    if (child.tagName == "INPUT") {
+      element.textContent = child.value;
+      child.remove();
+    }
+  });
+  this.textContent = "Edit";
+  //   this.onclick=editEntry;
 }
