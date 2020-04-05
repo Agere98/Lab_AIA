@@ -43,5 +43,22 @@ function saveEntry() {
     }
   });
   this.textContent = "Edit";
-  //   this.onclick=editEntry;
+  this.onclick = editEntry;
+}
+
+function editEntry() {
+  let entry = this.parentElement;
+  while (entry.tagName != "TR") {
+    entry = entry.parentElement;
+  }
+  [...entry.getElementsByTagName("td")].forEach((element) => {
+    if (element.children.length == 0) {
+      const input = document.createElement("input");
+      input.value = element.textContent;
+      element.textContent = "";
+      element.appendChild(input);
+    }
+  });
+  this.textContent = "Save";
+  this.onclick = saveEntry;
 }
