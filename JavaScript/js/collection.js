@@ -16,8 +16,16 @@ function addEntry() {
   field.appendChild(saveButton);
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
-//   removeButton.onclick = removeEntry;
+  removeButton.onclick = removeEntry;
   field.appendChild(removeButton);
   entry.appendChild(field);
   table.appendChild(entry);
+}
+
+function removeEntry() {
+  let entry = this.parentElement;
+  while (entry.tagName != "TR") {
+    entry = entry.parentElement;
+  }
+  entry.remove();
 }
