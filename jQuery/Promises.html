@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      function getHTTP(url) {
+        return new Promise(function (resolve, reject) {
+          var request = new XMLHttpRequest();
+          request.open("GET", url);
+          request.onload = function () {
+            if (request.status == 200) {
+              resolve(request.response);
+            } else {
+              reject(request.statusText);
+            }
+          };
+          request.onerror = function () {
+            reject("An error has occurred");
+          };
+          request.send();
+        });
+      }
+      $(function () {
+        $("#load").one("click", function () {
+          getHTTP("guitars.json").then(
+            function (response) {
+              $("#content").append(response);
+            },
+            function (error) {
+              $("#content").append(error);
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="load">Load</button>
+    <div id="content"></div>
+  </body>
+</html>
