@@ -24,6 +24,11 @@ textarea {
   resize: vertical;
 }
 
+select {
+  padding: 2px;
+  margin: 4px;
+}
+
 button {
   width: 60px;
   padding: 2px;
