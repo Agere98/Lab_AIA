@@ -1,3 +1,73 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 4px;
+}
+
+h1 {
+  margin: 16px;
+}
+
+input {
+  padding: 2px;
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  padding: 2px;
+  width: 100%;
+  resize: vertical;
+}
+
+button {
+  width: 60px;
+  padding: 2px;
+}
+
+.collection {
+  margin: 16px 0px;
+}
+
+.collection-item {
+  overflow: auto;
+  padding: 8px;
+}
+
+.collection-item * {
+  margin: 2px 0px;
+}
+
+.collection-item .item-content {
+  overflow: hidden;
+}
+
+.collection-item:nth-child(odd) {
+  background: rgb(210, 244, 255);
+}
+
+.collection-item:first-child {
+  background: rgb(120, 194, 255);
+}
+
+.collection-item h3 {
+  margin: 8px 0px;
+}
+
+.collection-item img {
+  float: left;
+  width: 200px;
+  margin-right: 8px;
+}
+
+.small-button {
+  width: 16px;
+  margin: 0px 4px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }

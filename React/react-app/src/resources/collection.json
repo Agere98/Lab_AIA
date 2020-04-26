@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Item 0",
+      "description": "A descriptive description",
+      "imageURL": "resources/image.png",
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "name": "Item 1",
+      "description": "Some text",
+      "imageURL": "resources/image.png",
+      "rating": 2
+    }
+  ]
+}
