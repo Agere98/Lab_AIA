@@ -8,9 +8,11 @@ class Collection extends React.Component {
     super();
     this.state = {
       items: [],
+      filter: "",
     };
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -36,15 +38,32 @@ class Collection extends React.Component {
     });
   }
 
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
+
   render() {
-    const items = this.state.items.map((item) => (
-      <CollectionItem key={item.id} item={item} remove={this.removeItem} />
-    ));
+    const items = this.state.items
+      .filter((item) =>
+        item.name.toLowerCase().includes(this.state.filter.toLowerCase())
+      )
+      .map((item) => (
+        <CollectionItem key={item.id} item={item} remove={this.removeItem} />
+      ));
 
     return (
-      <div className="collection">
-        <CollectionForm key="form" add={this.addItem} />
-        {items}
+      <div>
+        <input
+          name="filter"
+          placeholder="Filter list..."
+          value={this.state.filter}
+          onChange={this.handleChange}
+        />
+        <div className="collection">
+          <CollectionForm key="form" add={this.addItem} />
+          {items}
+        </div>
       </div>
     );
   }
