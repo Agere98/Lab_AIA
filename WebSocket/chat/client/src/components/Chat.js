@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Input from "./Input";
+import Messages from "./Messages";
+import Users from "./Users";
 export default function Chat({ socket }) {
-  const [messages, setMessages] = useState([]);
   const send = (message) => {
     socket.emit("message", message);
   };
-  useEffect(() => {
-    socket.on("message", (data) => {
-      setMessages((m) => [...m, data]);
-    });
-  }, [socket]);
   return (
     <div>
-      <ul>
-        {messages.map((m) => (
-          <li>{m}</li>
-        ))}
-      </ul>
+      <Messages socket={socket} />
       <Input send={send} buttonText="Send" />
+      <Users socket={socket} />
     </div>
   );
 }
