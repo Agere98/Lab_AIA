@@ -14,7 +14,7 @@ export default function LogIn({ socket }) {
     <div>
       <h1>Choose your nickname</h1>
       <Input send={login} buttonText="Enter chat" />
-      <h3>{error ? error : ""}</h3>
+      {error ? error : ""}
     </div>
   );
 }
