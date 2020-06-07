@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-import Input from "./components/Input";
+import Chat from "./components/Chat";
+import LogIn from "./components/LogIn";
 const socket = io("http://localhost:3000");
 export default function App() {
-  const [messages, setMessages] = useState([]);
+  const [isLoggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
-    socket.on("message", (data) => {
-      setMessages((m) => [...m, data]);
+    socket.on("loggedIn", () => {
+      setLoggedIn(true);
     });
   }, []);
-  const send = (message) => {
-    socket.emit("message", message);
-  };
-  return (
-    <div>
-      <ul>
-        {messages.map((m) => (
-          <li>{m}</li>
-        ))}
-      </ul>
-      <Input send={send} buttonText="Send" />
-    </div>
-  );
+  if (isLoggedIn) {
+    return <Chat socket={socket} />;
+  } else {
+    return <LogIn socket={socket} />;
+  }
 }

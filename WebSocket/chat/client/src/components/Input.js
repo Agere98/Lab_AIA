@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-export default function Input({ send }) {
+export default function Input({ send, buttonText }) {
   const [text, setText] = useState("");
   const handleChange = (e) => {
     setText(e.target.value);
@@ -12,7 +12,7 @@ export default function Input({ send }) {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={text} onChange={handleChange} />
-      <input type="submit" value="Send" />
+      <input type="submit" value={buttonText} />
     </form>
   );
 }
