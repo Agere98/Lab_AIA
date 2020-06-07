@@ -10,6 +10,18 @@ server.on("connect", (socket) => {
     }
   });
   socket.on("login", (nickname) => {
+    if (!nickname || nickname.trim().length == 0) {
+      socket.emit("err", "Invalid nickname.");
+      return;
+    }
+    nickname = nickname.trim();
+    if (active_users.findIndex((u) => u.nickname == nickname) >= 0) {
+      socket.emit(
+        "err",
+        "This nickname is already taken. Please choose a different nickname."
+      );
+      return;
+    }
     active_users.push({
       nickname: nickname,
       id: socket.id,
